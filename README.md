@@ -1,5 +1,5 @@
 # generator-node-ts-api [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> This project is a scaffolding tool to create one api with Node.js, TypeScript  and mongodb
+> This project is a scaffolding tool to create RESTFul API using Node.js and TypeScript
 
 ## Installation
 
