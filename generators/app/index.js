@@ -1,28 +1,26 @@
-'use strict';
-const Generator = require('yeoman-generator');
-const chalk = require('chalk');
-const yosay = require('yosay');
+"use strict";
+const Generator = require("yeoman-generator");
+const chalk = require("chalk");
+const yosay = require("yosay");
 
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
-    this.log(
-      yosay(`Welcome to the ${chalk.red('generator-node-ts-api')}!`)
-    );
+    this.log(yosay(`Welcome to the ${chalk.red("generator-node-ts-api")}!`));
 
     const prompts = [
       {
-        type: 'input',
-        name: 'name',
-        message: 'What name would you like to use for this project?',
+        type: "input",
+        name: "name",
+        message: "What name would you like to use for this project?",
         default: this.appname
       },
       {
-        type: 'list',
-        name: 'versonES',
-        message: 'What EcmaScript version would you like to use ?',
-        choices: ['es5', 'es6', 'es7']
-      },
+        type: "list",
+        name: "versonES",
+        message: "What EcmaScript version would you like to use ?",
+        choices: ["es5", "es6", "es7"]
+      }
     ];
 
     return this.prompt(prompts).then(props => {
@@ -32,72 +30,70 @@ module.exports = class extends Generator {
   }
 
   writing() {
-
-
-    //.gitignore    
+    // .gitignore
     this.fs.copy(
-      this.templatePath('.gitignore'),
-      this.destinationPath(`.gitignore`)
+      this.templatePath(".gitignore"),
+      this.destinationPath(".gitignore")
     );
 
-    //Dockerfile
+    // Dockerfile
     this.fs.copy(
-      this.templatePath('Dockerfile'),
-      this.destinationPath('Dockerfile')
+      this.templatePath("Dockerfile"),
+      this.destinationPath("Dockerfile")
     );
 
-    //package.json
+    // Package.json
     this.fs.copyTpl(
-      this.templatePath('_package.json'),
-      this.destinationPath('package.json'),
+      this.templatePath("_package.json"),
+      this.destinationPath("package.json"),
       {
         name: this.props.name
       }
     );
 
-    //program.ts
+    // Program.ts
     this.fs.copy(
-      this.templatePath('program.ts'),
-      this.destinationPath('program.ts')
+      this.templatePath("program.ts"),
+      this.destinationPath("program.ts")
     );
 
-    //startUp.ts
+    // StartUp.ts
     this.fs.copy(
-      this.templatePath('startUp.ts'),
-      this.destinationPath('startUp.ts')
+      this.templatePath("startUp.ts"),
+      this.destinationPath("startUp.ts")
     );
 
-    //tsconfig.json
+    // Tsconfig.json
     this.fs.copyTpl(
-      this.templatePath('_tsconfig.json'),
-      this.destinationPath('tsconfig.json'),
+      this.templatePath("_tsconfig.json"),
+      this.destinationPath("tsconfig.json"),
       {
         versonES: this.props.versonES
       }
     );
 
-    //Controller
+    // Controller
     this.fs.copy(
-      this.templatePath('controller/valuesController.ts'),
-      this.destinationPath('controller/valuesController.ts')
+      this.templatePath("controller/valuesController.ts"),
+      this.destinationPath("controller/valuesController.ts")
     );
 
-    //infra
+    // Infra
     this.fs.copy(
-      this.templatePath('infra/helper.ts'),
-      this.destinationPath('infra/helper.ts')
+      this.templatePath("infra/helper.ts"),
+      this.destinationPath("infra/helper.ts")
     );
 
-    //router
+    // Router
     this.fs.copy(
-      this.templatePath('router/newsRouter.ts'),
-      this.destinationPath('router/newsRouter.ts')
+      this.templatePath("router/newsRouter.ts"),
+      this.destinationPath("router/newsRouter.ts")
     );
 
-    //router
+    // Router
     this.fs.copy(
-      this.templatePath('router/newsRouter.ts'),
-      this.destinationPath('router/newsRouter.ts')
+      this.templatePath("router/newsRouter.ts"),
+      this.destinationPath("router/newsRouter.ts")
     );
   }
 
