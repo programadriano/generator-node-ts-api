@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Thiago da Silva Adriano",
+      "authorEmail": "tadriano.net@gmail.com",
+      "authorUrl": "https://omundoedos.net/"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "target": "<%= versonES %>",
+        "module": "commonjs",
+        "outDir": "dist",
+        "incremental": true,
+        "typeRoots": [
+            "../node_modules/@types"
+        ],
+        "types": [
+            "node"
+        ]
+    },
+    "include": [
+        "**/*.ts",
+        "*.ts",
+    ],
+    "exclude": [
+        "node_modules"
+    ],
+    "buildOnSave": true,
+    "compileOnSave": true
+}
