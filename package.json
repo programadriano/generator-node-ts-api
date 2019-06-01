@@ -1,8 +1,8 @@
 {
   "name": "generator-node-ts-api",
-  "version": "0.0.0",
-  "description": "This project is a scaffolding tool to create one api with Node.js, TypeScript  and mongodb",
-  "homepage": "",
+  "version": "0.0.1",
+  "description": "This project is a scaffolding tool to create RESTFul API using Node.js and TypeScript",
+  "homepage": "-",
   "author": {
     "name": "Thiago da Silva Adriano",
     "email": "tadriano.net@gmail.com",
