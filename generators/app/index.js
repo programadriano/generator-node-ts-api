@@ -30,12 +30,6 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    // .gitignore
-    this.fs.copy(
-      this.templatePath(".gitignore"),
-      this.destinationPath(".gitignore")
-    );
-
     // Dockerfile
     this.fs.copy(
       this.templatePath("Dockerfile"),
