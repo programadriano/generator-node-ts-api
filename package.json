@@ -1,6 +1,6 @@
 {
   "name": "generator-node-ts-api",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "This project is a scaffolding tool to create RESTFul API using Node.js and TypeScript",
   "homepage": "-",
   "author": {
